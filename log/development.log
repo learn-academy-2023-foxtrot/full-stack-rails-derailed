@@ -491,3 +491,642 @@ Processing by BlogController#index as HTML
 Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2810)
 
 
+Started GET "/" for ::1 at 2023-10-05 11:24:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 635)
+Completed 200 OK in 15ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 7330)
+
+
+Started GET "/new" for ::1 at 2023-10-05 11:36:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:36:53 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 59ms (ActiveRecord: 25.9ms | Allocations: 7339)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=new):
+  
+app/controllers/blog_controller.rb:6:in `show'
+Started GET "/blogs/id/new" for ::1 at 2023-10-05 11:37:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/id/new"):
+  
+Started GET "/blogs/1/new" for ::1 at 2023-10-05 11:37:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/1/new"):
+  
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:37:35 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 954)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=new):
+  
+app/controllers/blog_controller.rb:6:in `show'
+Started GET "/blogs" for ::1 at 2023-10-05 11:39:19 -0700
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 33603)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.0ms | Allocations: 34458)
+
+
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:39:21 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 951)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=1):
+  
+app/controllers/blog_controller.rb:6:in `show'
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:40:39 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 958)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=1):
+  
+app/controllers/blog_controller.rb:6:in `show'
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:40:40 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 944)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=1):
+  
+app/controllers/blog_controller.rb:6:in `show'
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1131589309581606540)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1131589309581606540)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Create (4.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 1"], ["content", "this is our post"], ["created_at", "2023-10-05 18:45:34.541515"], ["updated_at", "2023-10-05 18:45:34.541515"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:45:43 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (10.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 13238)
+Completed 200 OK in 63ms (Views: 14.8ms | ActiveRecord: 14.1ms | Allocations: 19390)
+
+
+Started GET "/blogs/1/new" for ::1 at 2023-10-05 11:45:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/1/new"):
+  
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:45:56 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 953)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=new):
+  
+app/controllers/blog_controller.rb:6:in `show'
+Started GET "/blogs" for ::1 at 2023-10-05 11:46:05 -0700
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2365)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 2636)
+
+
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:46:06 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2283)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3049)
+
+
+Started GET "/blogs" for ::1 at 2023-10-05 11:47:08 -0700
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2294)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 2564)
+
+
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:47:08 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2289)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 3062)
+
+
+Started GET "/blogs" for ::1 at 2023-10-05 11:47:09 -0700
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2297)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2567)
+
+
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:47:09 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2304)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3070)
+
+
+Started GET "/blogs" for ::1 at 2023-10-05 11:47:10 -0700
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2318)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2588)
+
+
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:47:10 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2298)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 3064)
+
+
+Started GET "/blogs" for ::1 at 2023-10-05 11:47:13 -0700
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2294)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2564)
+
+
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:47:15 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 944)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=new):
+  
+app/controllers/blog_controller.rb:6:in `show'
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:47:16 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 942)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=new):
+  
+app/controllers/blog_controller.rb:6:in `show'
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:50:32 -0700
+Processing by BlogController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/new.html.erb within layouts/application
+  Rendered blog/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2215)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 15098)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 4.2ms | Allocations: 17673)
+
+
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:50:39 -0700
+Processing by BlogController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/new.html.erb within layouts/application
+  Rendered blog/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 849)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2961)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3232)
+
+
+Started GET "/blogs/new" for ::1 at 2023-10-05 11:51:21 -0700
+Processing by BlogController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/new.html.erb within layouts/application
+  Rendered blog/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1123)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3500)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 4325)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:38 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (2.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:38.287434"], ["updated_at", "2023-10-05 18:51:38.287434"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 2.9ms | Allocations: 3652)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:40 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:40.479390"], ["updated_at", "2023-10-05 18:51:40.479390"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 1.0ms | Allocations: 2216)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:42 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:42.317177"], ["updated_at", "2023-10-05 18:51:42.317177"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 1.1ms | Allocations: 2231)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:42 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:42.935650"], ["updated_at", "2023-10-05 18:51:42.935650"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.9ms | Allocations: 2219)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:43 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:43.110101"], ["updated_at", "2023-10-05 18:51:43.110101"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.8ms | Allocations: 2221)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:43 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:43.254540"], ["updated_at", "2023-10-05 18:51:43.254540"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 1.2ms | Allocations: 2215)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:43 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:43.399281"], ["updated_at", "2023-10-05 18:51:43.399281"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.8ms | Allocations: 2215)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:43 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:43.529077"], ["updated_at", "2023-10-05 18:51:43.529077"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.7ms | Allocations: 2233)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:43 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:43.644305"], ["updated_at", "2023-10-05 18:51:43.644305"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 10ms (ActiveRecord: 0.8ms | Allocations: 2227)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:44 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:44.363934"], ["updated_at", "2023-10-05 18:51:44.363934"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.8ms | Allocations: 2225)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:44 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:44.525510"], ["updated_at", "2023-10-05 18:51:44.525510"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms | Allocations: 2230)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:44 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:44.646516"], ["updated_at", "2023-10-05 18:51:44.646516"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.9ms | Allocations: 2248)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:44 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:44.782018"], ["updated_at", "2023-10-05 18:51:44.782018"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms | Allocations: 2227)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.022686"], ["updated_at", "2023-10-05 18:51:45.022686"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.8ms | Allocations: 2218)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.177158"], ["updated_at", "2023-10-05 18:51:45.177158"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms | Allocations: 2218)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.308376"], ["updated_at", "2023-10-05 18:51:45.308376"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 1.1ms | Allocations: 2233)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.424641"], ["updated_at", "2023-10-05 18:51:45.424641"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.9ms | Allocations: 2227)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.577583"], ["updated_at", "2023-10-05 18:51:45.577583"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.9ms | Allocations: 2215)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.705311"], ["updated_at", "2023-10-05 18:51:45.705311"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 1.1ms | Allocations: 2221)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.850784"], ["updated_at", "2023-10-05 18:51:45.850784"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms | Allocations: 2242)
+
+
+Started POST "/blogs" for ::1 at 2023-10-05 11:51:45 -0700
+Processing by BlogController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "blog"=>{"title"=>"Post 2", "content"=>"Hi Aleja"}, "commit"=>"Add Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Post 2"], ["content", "Hi Aleja"], ["created_at", "2023-10-05 18:51:45.981871"], ["updated_at", "2023-10-05 18:51:45.981871"]]
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blog_controller.rb:12:in `create'
+No template found for BlogController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.9ms | Allocations: 2225)
+
+
+Started GET "/blogs/2" for ::1 at 2023-10-05 11:53:20 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (12.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2448)
+Completed 200 OK in 29ms (Views: 10.0ms | ActiveRecord: 12.7ms | Allocations: 3909)
+
+
+Started GET "/blogs/3" for ::1 at 2023-10-05 11:53:27 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2295)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 3060)
+
+
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+Started GET "/blogs/3" for ::1 at 2023-10-05 11:54:39 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (3.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2731)
+Completed 200 OK in 23ms (Views: 8.7ms | ActiveRecord: 3.2ms | Allocations: 4050)
+
+
+Started GET "/blogs/3" for ::1 at 2023-10-05 11:54:39 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2297)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 3064)
+
+
+Started GET "/blogs" for ::1 at 2023-10-05 11:54:45 -0700
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2479)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 2807)
+
+
+Started GET "/blogs/1" for ::1 at 2023-10-05 11:54:46 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2280)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3047)
+
+
+Started GET "/blogs/2" for ::1 at 2023-10-05 11:54:52 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2291)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 3056)
+
+
+Started GET "/blogs/22" for ::1 at 2023-10-05 11:54:57 -0700
+Processing by BlogController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/blog_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering blog/show.html.erb within layouts/application
+  Rendered blog/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2303)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 3068)
+
+
